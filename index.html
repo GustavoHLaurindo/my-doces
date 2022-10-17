@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="bala-exemplo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>My Doces</title>
+</head>
+<body>
+    <main class="principal">
+
+        <section class="saldo">
+            <p>Saldo <span><span style="color: rgb(0, 175, 0);">R$</span><span id="valor-saldo">2,00</span></span></p>
+        </section>
+
+        <section class="titulo">
+            <h1><span id="my-titulo">My</span>Doces<sub>®</sub></h1>
+        </section>
+
+        <form autocomplete="off">
+            <p><label for="inome">Nome:</label><input type="text" name="nome" id="pesquisar"></p>
+            <input id="button" onclick="envio()" type="button" value="Enviar">
+        </form>
+        <section class="flex-cartas">
+
+            <div class="item-carta">
+                <h2 class="subtitulo-carta">Bala de Menta</h2>
+                <div class="foto-bala">
+                    <img src="bala-menta-removebg-preview.png" alt="bala">
+                </div>
+                <div class="valor">
+                    <p>Valor <span><span style="color: rgb(0, 175, 0);">R$</span>1,00</span></p>
+                </div>
+                <button class="botao" onclick="diminuir(),belo()">Adicionar</button>
+            </div>
+            
+            <div class="item-carta">
+                <h2 class="subtitulo-carta">Bala Canela</h2>
+                <div class="foto-bala">
+                    <img src="bala-canela.png" alt="">
+                </div>
+                <div class="valor">
+                    <p>Valor <span><span style="color: rgb(0, 175, 0);">R$</span>1,00</span></p>
+                </div>
+                <button class="botao" onclick="diminuir(),canela()">Adicionar</button>
+            </div>
+
+            <div class="item-carta">
+                <h2 class="subtitulo-carta">Amendoim</h2>
+                <div class="foto-bala">
+                    <img src="amendoim.png" alt="">
+                </div>
+                <div class="valor">
+                    <p>Valor <span><span style="color: rgb(0, 175, 0);">R$</span>1,00</span></p>
+                </div>
+                <button class="botao" onclick="diminuir()">adicionar</button>
+            </div>
+        </section>
+    </main>
+    <script>
+        let valor = 2.00;
+        var body = document.querySelector('body');
+        let span = document.querySelector("#valor-saldo");
+        const input = document.querySelector("#pesquisar");
+
+        function diminuir() {
+            if (valor == 0){
+                alert('O saldo foi esgotado!');
+                return 0
+                
+            }
+            else{
+                valor--;
+                atualizar();
+            }
+            
+        }
+        function envio(){
+            console.log(input.value);
+        }
+        function belo(){
+            console.log('1- bala de menta')
+        }
+        function canela(){
+            console.log('1- bala canela')
+
+        }
+        function amendoim(){
+            console.log('1- bala amendoim')
+
+        }
+        function atualizar() {
+            span.innerText = valor;
+    }
+
+    </script>
+</body>
+</html>
