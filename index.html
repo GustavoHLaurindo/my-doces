@@ -34,24 +34,24 @@
                 <div class="valor">
                     <p>Valor <span><span style="color: rgb(0, 175, 0);">R$</span>1,00</span></p>
                 </div>
-                <button class="botao" onclick="diminuir(),belo()">Adicionar</button>
+                <button class="botao" onclick="diminuir(),menta()">Adicionar</button>
             </div>
             
             <div class="item-carta">
-                <h2 class="subtitulo-carta">Bala Canela</h2>
+                <h2 class="subtitulo-carta">Good Smile</h2>
                 <div class="foto-bala">
-                    <img src="bala-canela.png" alt="">
+                    <img id="good-smile" src="good-smile-teste.png" alt="">
                 </div>
                 <div class="valor">
                     <p>Valor <span><span style="color: rgb(0, 175, 0);">R$</span>1,00</span></p>
                 </div>
-                <button class="botao" onclick="diminuir(),canela()">Adicionar</button>
+                <button class="botao" onclick="diminuir(),goodsmile()">Adicionar</button>
             </div>
 
             <div class="item-carta">
-                <h2 class="subtitulo-carta">Amendoim</h2>
+                <h2 class="subtitulo-carta">bala de yourgut</h2>
                 <div class="foto-bala">
-                    <img src="amendoim.png" alt="">
+                    <img id="yourgut" src="Meu projeto (1).png" alt="">
                 </div>
                 <div class="valor">
                     <p>Valor <span><span style="color: rgb(0, 175, 0);">R$</span>1,00</span></p>
@@ -62,7 +62,6 @@
     </main>
     <script>
         let valor = 2.00;
-        var body = document.querySelector('body');
         let span = document.querySelector("#valor-saldo");
         const input = document.querySelector("#pesquisar");
 
@@ -81,15 +80,15 @@
         function envio(){
             console.log(input.value);
         }
-        function belo(){
+        function menta(){
             console.log('1- bala de menta')
         }
         function canela(){
             console.log('1- bala canela')
 
         }
-        function amendoim(){
-            console.log('1- bala amendoim')
+        function goodsmile(){
+            console.log('1- bala good-smile')
 
         }
         function atualizar() {
