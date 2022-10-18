@@ -106,7 +106,7 @@ section.saldo span{
 }
 .flex-cartas{
     display: flex;
-    height: 100%;
+    height: 50vh;
     
 
     align-items: center;
