@@ -16,7 +16,7 @@ body,html{
 
 }
 body{
-    background:rgba(0, 0, 0, 0.748) url(halloween-redimencionada.jpg);
+    background:rgba(0, 0, 0, 0.863) url(halloween-redimencionada.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -36,6 +36,8 @@ body{
 }
 form{
     display: flex;
+    align-items: center;
+    height: 140px;
     justify-content: center;
 }
 input#button{
@@ -52,6 +54,7 @@ input#button{
     cursor: pointer;
 
 }
+
 form p{
     color: white;
     font-weight: bold;
@@ -60,16 +63,23 @@ form p{
     
 }
 input#pesquisar{
-    height: 25px;
+    height: 22px;
     width: 200px;
     font-size: 1em;
     font-family: var(--fonte-subtitulo);
     border-radius: 10px;
-    padding-left: 14px;
-    border: 2px solid rgb(108, 41, 253);
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 3px;
+    outline: none;
+    box-shadow: 5px 4px 11px 0px rgba(0, 0, 0, 0.765);
+    border: 2px solid rgb(129, 71, 255);
+}
+input#pesquisar:focus-within{
+    border: 2px solid rgb(111, 30, 250);
 }
 .titulo  sub{
-    color: rgb(24, 24, 24);
+    color: rgb(212, 197, 197);
     text-shadow: none;
 }
 span#my-titulo{
@@ -96,7 +106,7 @@ section.saldo span{
 }
 .flex-cartas{
     display: flex;
-    height: 80vh;
+    height: 100%;
     
 
     align-items: center;
@@ -173,6 +183,7 @@ button.botao{
     color: rgb(45, 45, 45);
     font-size: 1.1em;
     text-transform: uppercase;
+    width: 200px;
     border-radius: 15px;
     border: 2px solid rgb(245, 200, 0);
     background-color: rgb(246, 255, 0);
@@ -180,8 +191,9 @@ button.botao{
     
 }
 button:hover{
-    transform: translate(0px, -5px);
-    color: rgb(255, 145, 0);
-    transition: transform 0.5s ease;
+    transform: translate(0px, -3px);
+    color: rgb(255, 60, 0);
+    width: 230px;
+    transition: transform 0.5s ease-in-out, width 0.3s ease-in-out;
 }
 
